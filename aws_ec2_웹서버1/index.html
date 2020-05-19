@@ -3,14 +3,14 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS_EC2_웹서버(1)  | June&#39;s site</title>
-  <meta name="description" content=" 'AWS_EC2_웹서버(1)'read this article.">
-  <meta property="og:title" content="AWS_EC2_웹서버(1)">
+  <title>  | June&#39;s site</title>
+  <meta name="description" content=" ''read this article.">
+  <meta property="og:title" content="">
   
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-05-19">
+  <meta property="article:published_time" content="0001-01-01">
   
-  <meta property="og:description" content=" 'AWS_EC2_웹서버(1)'read this article.">
+  <meta property="og:description" content=" ''read this article.">
   <meta property="og:url" content="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/">
   <meta property="og:site_name" content="June&#39;s site">
   
@@ -75,8 +75,8 @@
     <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
-        <time>Tuesday, May 19, 2020 17:48</time>
-        <h1>AWS_EC2_웹서버(1)</h1>
+        <time>Monday, Jan 1, 0001 00:00</time>
+        <h1></h1>
       </div>
     </a>
   </div>
@@ -84,25 +84,22 @@
     <span class="title">TOC</span>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-키-변경">1. 키 변경</a></li>
-    <li><a href="#2-설정-및-접속">2. 설정 및 접속</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#date-2020-05-19t1748020900">title: &ldquo;AWS_EC2_웹서버(1)&rdquo;
+date: 2020-05-19T17:48:02+09:00</a></li>
   </ul>
 
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#1-키-변경">1. 키 변경</a></li>
+    <li><a href="#2-설정-및-접속">2. 설정 및 접속</a></li>
   </ul>
 </nav>
   </div>
   <section class="post-content">
-    <h1 id="클러스터-생성">클러스터 생성</h1>
+    <h1 id="---encoding-utf-8---">-<em>- encoding: utf-8 -</em>-</h1>
+<hr>
+<h2 id="date-2020-05-19t1748020900">title: &ldquo;AWS_EC2_웹서버(1)&rdquo;
+date: 2020-05-19T17:48:02+09:00</h2>
+<h1 id="클러스터-생성">클러스터 생성</h1>
 <pre><code>aws 공식 홈페이지에서 가이드라인을 putty로 제공하기 때문에 사용.
 putty를 사용하는 이유는 서버를 구성하는 우분투 리눅스를 원격으로 연결해서 사용하기 위함이다.
 putty 설치 : &lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&gt;
@@ -114,32 +111,32 @@ putty 설치 : &lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.htm
 <p><img src="https://user-images.githubusercontent.com/65329769/82172307-c1e2b300-9904-11ea-9980-1c99159fc8cd.jpg" alt="key_2"></p>
 <p>Save private key로 저장. (이름은 똑같이)</p>
 <h2 id="2-설정-및-접속">2. 설정 및 접속</h2>
-<p><a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html</a> 를 참조</p>
-<h4 id="호스트-네임-ubuntupublic-dns">호스트 네임 ubuntu@(public dns)</h4>
-<h4 id="ssh-포트22">SSH 포트22</h4>
-<h4 id="ssh-auth-아까-만든-ppk-키-불러오기">SSH-Auth-아까 만든 .ppk 키 불러오기</h4>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html</a> 를 참조
+호스트 네임 ubuntu@(public dns)
+SSH 포트22
+SSH-Auth-아까 만든 .ppk 키 불러오기</p>
 <h1 id="웹-서버아파치-설치">웹 서버(아파치) 설치</h1>
 <p>putty로 연 콘솔창에 이것들을 입력</p>
 <pre><code>sudo apt-get update
 
 sudo apt-get update sudo apt-get install apache2
 </code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82172488-433a4580-9905-11ea-9329-481702b86e6c.jpg" alt="993F4C4A5B5D39EA2F"></p>
-<h4 id="출처--httpswoodforesttistorycom279">출처 : <a href="https://woodforest.tistory.com/279">https://woodforest.tistory.com/279</a></h4>
+<p>출처 : <a href="https://woodforest.tistory.com/279">https://woodforest.tistory.com/279</a></p>
 
   </section>
   <div class="share">    
     <a
-      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&t=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29"
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&t="
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-facebook"></i
     ></a>
     <a
-      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&text=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29&tw_p=tweetbutton"
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&text=&tw_p=tweetbutton"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-twitter"></i
     ></a>
     <a
-      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&title=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29"
+      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&title="
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-get-pocket"></i
     ></a>
@@ -156,7 +153,7 @@ sudo apt-get update sudo apt-get install apache2
       <a href="mailto:kki6890k@gmail.com">Kim Kang-il</a>
       
       wrotes this article at
-      <span class="highlight">Tuesday, May 19, 2020 17:48</span> 
+      <span class="highlight">Monday, Jan 1, 0001 00:00</span> 
       for you.
     </div>
     <div class="desc">
@@ -195,16 +192,10 @@ sudo apt-get update sudo apt-get install apache2
     Recommend these articles
     <ul>
       
-      <li>
-        <a href="https://june512.github.io/ubuntu_git/" rel="prev">
-          <span>Ubuntu_git</span>
-        </a>
-      </li>
-      
       
       <li>
-        <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/" rel="next">
-          <span>AWS_EC2_웹서버(2)</span>
+        <a href="https://june512.github.io/post/test/" rel="next">
+          <span>Test</span>
         </a>
       </li>
       

@@ -82,66 +82,42 @@
   </div>
   <div class="post-toc">
     <span class="title">TOC</span>
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#데이터베이스">데이터베이스</a></li>
-    <li><a href="#php">PHP</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#git-설치">git 설치</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#filezilla-이용">filezilla 이용</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
   <section class="post-content">
     <p><img src="https://user-images.githubusercontent.com/65329769/82184818-32003180-9923-11ea-8253-218a20c2c296.jpg" alt="99E3013E5B6070632E"></p>
-<h6 id="이-화면은-1편에서-아파치-서버-설치-후-확인할-때-나타나는-화면의-일부입니다">이 화면은 (1)편에서 아파치 서버 설치 후 확인할 때 나타나는 화면의 일부입니다.</h6>
-<h6 id="화면에서-스크롤을-조금-내려보면-document-root-directory-ubuntu-document-root가-어디인지-확인할-수-있습니다">화면에서 스크롤을 조금 내려보면 document root directory, ubuntu document root가 어디인지 확인할 수 있습니다.</h6>
-<h6 id="html폴더-안에-파일을-올려야-publicdns파일이름-으로-웹-브라우저에서-접근-가능합니다">html폴더 안에 파일을 올려야 publicDNS/파일이름 으로 웹 브라우저에서 접근 가능합니다.</h6>
-<h2 id="데이터베이스">데이터베이스</h2>
+<p>이 화면은 (1)편에서 아파치 서버 설치 후 확인할 때 나타나는 화면의 일부입니다.
+화면에서 스크롤을 조금 내려보면 document root directory, ubuntu document root가 어디인지 확인할 수 있습니다.
+html폴더 안에 파일을 올려야 publicDNS/파일이름 으로 웹 브라우저에서 접근 가능합니다.</p>
+<h1 id="데이터베이스">데이터베이스</h1>
 <pre><code>sudo apt-get update //패키지 업데이트 
 sudo apt-get install mysql-server
 </code></pre><pre><code>mysql -uroot -p //mysql root 계정 접속 
 show databases; //db 확인 
 exit //mysql 나와서 다시 리눅스로
 </code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82185207-d4201980-9923-11ea-94c4-81f03ac93e8f.jpg" alt="99B4A2495B6072020A"></p>
-<h2 id="php">PHP</h2>
+<h1 id="php">PHP</h1>
 <pre><code>sudo add-apt-repository ppa:ondrej/php          //보안을 위한 저장소 추가
 sudo apt-get update                             //저장소에서 패키지 업데이트
 sudo apt-get install php                        //했더니 php 7.x 설치됨
 php -v                                          //버전 확인
-</code></pre><h6 id="vi편집기로-php-파일-작성해서-파일-이름이-testphp라면">vi편집기로 php 파일 작성해서 (파일 이름이 test.php라면)</h6>
+</code></pre><p>vi편집기로 php 파일 작성해서 (파일 이름이 test.php라면)</p>
 <pre><code>&lt;?php
 phpinfo();
 ?&gt;
-</code></pre><h6 id="웹-브라우저에서-publicdnstestphp-입력하면-아래와-같은-화면-확인-가능">웹 브라우저에서 publicDNS/test.php 입력하면 아래와 같은 화면 확인 가능.</h6>
+</code></pre><p>웹 브라우저에서 publicDNS/test.php 입력하면 아래와 같은 화면 확인 가능.</p>
 <p><img src="https://user-images.githubusercontent.com/65329769/82185413-1f3a2c80-9924-11ea-8932-97d37ed01f01.jpg" alt="998B2D495B60706328"></p>
-<h2 id="git-설치">git 설치</h2>
-<h6 id="bitbucket사용">bitbucket사용</h6>
+<h1 id="git-설치">git 설치</h1>
+<p>bitbucket사용</p>
 <pre><code>sudo apt-get install git git clone ~ //git repository를 놓을 곳에서 하기! 
 git pull origin master //bitbucket에 올려놓은 파일 끌어오기
-</code></pre><h2 id="filezilla-이용">filezilla 이용</h2>
+</code></pre><h1 id="filezilla-이용">filezilla 이용</h1>
 <p>설치 사이트 : <a href="https://filezilla-project.org/download.php">https://filezilla-project.org/download.php</a></p>
-<h4 id="파일-사이트관리자">파일-사이트관리자</h4>
+<p>파일-사이트관리자</p>
 <p><img src="https://user-images.githubusercontent.com/65329769/82185620-76400180-9924-11ea-8469-1651a687f7f2.jpg" alt="991C5A465B6070630E"></p>
 <p><img src="https://user-images.githubusercontent.com/65329769/82185647-848e1d80-9924-11ea-9e38-3cc212b5db99.jpg" alt="991E74455B60706324"></p>
-<h6 id="파일을-마우스로-끌어다-놓으면-단순하게-파일을-서버로-업로드-가능">파일을 마우스로 끌어다 놓으면 단순하게 파일을 서버로 업로드 가능!</h6>
-<h6 id="출처--httpswoodforesttistorycom280category860525">출처 : <a href="https://woodforest.tistory.com/280?category=860525">https://woodforest.tistory.com/280?category=860525</a></h6>
+<p>파일을 마우스로 끌어다 놓으면 단순하게 파일을 서버로 업로드 가능!</p>
+<p>출처 : <a href="https://woodforest.tistory.com/280?category=860525">https://woodforest.tistory.com/280?category=860525</a></p>
 
   </section>
   <div class="share">    
@@ -213,8 +189,8 @@ git pull origin master //bitbucket에 올려놓은 파일 끌어오기
     <ul>
       
       <li>
-        <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/" rel="prev">
-          <span>AWS_EC2_웹서버(1)</span>
+        <a href="https://june512.github.io/ubuntu_git/" rel="prev">
+          <span>Ubuntu_git</span>
         </a>
       </li>
       

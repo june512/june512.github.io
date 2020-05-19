@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/</loc>
-    <lastmod>2020-05-19T17:48:02+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://june512.github.io/ubuntu_git/</loc>
     <lastmod>2020-05-19T17:15:23+09:00</lastmod>
   </url>
@@ -30,6 +25,11 @@
   <url>
     <loc>https://june512.github.io/post/test/</loc>
     <lastmod>2020-05-19T16:40:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
