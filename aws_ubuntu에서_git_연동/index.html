@@ -3,22 +3,22 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS_EC2_웹서버(2)  | June&#39;s site</title>
-  <meta name="description" content=" 'AWS_EC2_웹서버(2)'read this article.">
-  <meta property="og:title" content="AWS_EC2_웹서버(2)">
+  <title>AWS_Ubuntu에서_git_연동  | June&#39;s site</title>
+  <meta name="description" content=" 'AWS_Ubuntu에서_git_연동'read this article.">
+  <meta property="og:title" content="AWS_Ubuntu에서_git_연동">
   
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="2020-05-19">
   
-  <meta property="og:description" content=" 'AWS_EC2_웹서버(2)'read this article.">
-  <meta property="og:url" content="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/">
+  <meta property="og:description" content=" 'AWS_Ubuntu에서_git_연동'read this article.">
+  <meta property="og:url" content="https://june512.github.io/aws_ubuntu%EC%97%90%EC%84%9C_git_%EC%97%B0%EB%8F%99/">
   <meta property="og:site_name" content="June&#39;s site">
   
   <meta property="og:image" content="https://june512.github.io/images/thumbnail.png">
   
   
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="canonical" href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/">
+  <link rel="canonical" href="https://june512.github.io/aws_ubuntu%EC%97%90%EC%84%9C_git_%EC%97%B0%EB%8F%99/">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
@@ -72,11 +72,11 @@
 
 <div class="post">
   <div class="post-title">
-    <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/">
+    <a href="https://june512.github.io/aws_ubuntu%EC%97%90%EC%84%9C_git_%EC%97%B0%EB%8F%99/">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
-        <time>Tuesday, May 19, 2020 17:49</time>
-        <h1>AWS_EC2_웹서버(2)</h1>
+        <time>Tuesday, May 19, 2020 18:03</time>
+        <h1>AWS_Ubuntu에서_git_연동</h1>
       </div>
     </a>
   </div>
@@ -85,59 +85,104 @@
     <nav id="TableOfContents"></nav>
   </div>
   <section class="post-content">
-    <p><img src="https://user-images.githubusercontent.com/65329769/82184818-32003180-9923-11ea-8253-218a20c2c296.jpg" alt="99E3013E5B6070632E"></p>
-<p>이 화면은 (1)편에서 아파치 서버 설치 후 확인할 때 나타나는 화면의 일부입니다.
-화면에서 스크롤을 조금 내려보면 document root directory, ubuntu document root가 어디인지 확인할 수 있습니다.
-html폴더 안에 파일을 올려야 publicDNS/파일이름 으로 웹 브라우저에서 접근 가능합니다.</p>
-<h1 id="데이터베이스">데이터베이스</h1>
-<pre><code>sudo apt-get update //패키지 업데이트 
-sudo apt-get install mysql-server
-</code></pre><pre><code>mysql -uroot -p //mysql root 계정 접속 
-show databases; //db 확인 
-exit //mysql 나와서 다시 리눅스로
-</code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82185207-d4201980-9923-11ea-94c4-81f03ac93e8f.jpg" alt="99B4A2495B6072020A"></p>
-<h1 id="php">PHP</h1>
-<pre><code>sudo add-apt-repository ppa:ondrej/php          //보안을 위한 저장소 추가
-sudo apt-get update                             //저장소에서 패키지 업데이트
-sudo apt-get install php                        //했더니 php 7.x 설치됨
-php -v                                          //버전 확인
-</code></pre><p>vi편집기로 php 파일 작성해서 (파일 이름이 test.php라면)</p>
-<pre><code>&lt;?php
-phpinfo();
-?&gt;
-</code></pre><p>웹 브라우저에서 publicDNS/test.php 입력하면 아래와 같은 화면 확인 가능.</p>
-<p><img src="https://user-images.githubusercontent.com/65329769/82185413-1f3a2c80-9924-11ea-8932-97d37ed01f01.jpg" alt="998B2D495B60706328"></p>
-<h1 id="git-설치">git 설치</h1>
-<p>bitbucket사용</p>
-<pre><code>sudo apt-get install git git clone ~ //git repository를 놓을 곳에서 하기! 
-git pull origin master //bitbucket에 올려놓은 파일 끌어오기
-</code></pre><h1 id="filezilla-이용">filezilla 이용</h1>
-<p>설치 사이트 : <a href="https://filezilla-project.org/download.php">https://filezilla-project.org/download.php</a></p>
-<p>파일-사이트관리자</p>
-<p><img src="https://user-images.githubusercontent.com/65329769/82185620-76400180-9924-11ea-8469-1651a687f7f2.jpg" alt="991C5A465B6070630E"></p>
-<p><img src="https://user-images.githubusercontent.com/65329769/82185647-848e1d80-9924-11ea-9e38-3cc212b5db99.jpg" alt="991E74455B60706324"></p>
-<p>파일을 마우스로 끌어다 놓으면 단순하게 파일을 서버로 업로드 가능!</p>
-<p>출처 : <a href="https://woodforest.tistory.com/280?category=860525">https://woodforest.tistory.com/280?category=860525</a></p>
+    <h1 id="aws-ubuntu에서-git-연동">AWS Ubuntu에서 git 연동</h1>
+<pre><code>1. github 저장소 만들기
+
+- 모르면 검색해서 저장소 만들어 주세요.
+</code></pre><pre><code>2. git init
+
+2.1 AWS를 putty로 연결을 했다라는 전제 조건이 붙는다.
+
+2.2 github에 올리고 싶은 폴더에 가서 git init을 한다.
+
+* git init : git을 사용하기 위해 git 초기화를 하는 단계.
+</code></pre><pre><code>3. git add -(-A를 하면 현재 폴더 전체, 각개를 하려면 -test.js라고 하면 된다.)
+
+* 깃은 3가지 stage가 있는데 working Directory(로컬저장소), Staging Area(임시저장소), Git Directory(Repository)이다.
+
+* git add 를 사용하는건 로컬-&gt;임시저장소로 보내는 과정이다.
+</code></pre><pre><code>4.  git remote add... 후 github에 넣는 작업입니다.
+</code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82089385-7bd3f680-972e-11ea-90ef-ec7b7dafa2f4.png" alt="99A4EA415B42CE9A2D"></p>
+<pre><code>4.1 git에게 원격저장소(github)의 위치를 설정해야 합니다. 
+ 깃허브 저장소를 처음 만들었으면 노란색 부분을 사용하시면 됩니다.
+</code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82089593-da00d980-972e-11ea-9507-f3b44d9270bb.png" alt="99B34A335B42E00A20"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>4.2 git push -u origin master
+
+Username : ID가 아닌, 유저 네임 입니다.
+
+Password : 이건 ID/PW의 PW 입니다.
+
+- origin(github)에 임시저장소에 있는것을 push 넣습니다. 
+</code></pre><pre><code>5. 끝 github에서 확인해 보세요.
+</code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82089918-7dea8500-972f-11ea-8e0d-04164f43b7fe.png" alt="994DC5405B42E03419"></p>
+<pre><code>6. 이후에 수정이 되어서 깃허브에 업로드 할 경우.
+
+git commit -am '#$%^'
+
+git push
+</code></pre><h1 id="-정리">* 정리</h1>
+<pre><code>* 로컬저장소 -&gt; 깃허브 백업하기
+
+1. git init
+
+2. git add -A
+
+3. git remote add origin https://github.com/USERNAME/Repository
+
+4. git push -u origin master
+
+5. 깃허브에서 확인
+
+
+
+* 수정후 다시 백업
+
+git commit -am '설명'
+
+git push
+
+
+
+* 깃허브 -&gt; 로컬저장소 (깃허브가 업데이트 되었을 시, 덮어쓰기?)
+
+1. git init
+
+2. git remote add origin https://github.com/USERNAME/Repository.git
+
+3. git fetch --all
+
+4. git pull origin master
+
+
+
+* 깃허브 -&gt; 로컬저장소 (새로운 로컬일시)
+
+1. git clone https://github.com/USERNAME/Repository.git
+
+2. 로컬저장소 확인
+</code></pre><p>출처 : <a href="https://adg0609.tistory.com/13">https://adg0609.tistory.com/13</a></p>
 
   </section>
   <div class="share">    
     <a
-      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25842%2f&t=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%282%29"
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ubuntu%25EC%2597%2590%25EC%2584%259C_git_%25EC%2597%25B0%25EB%258F%2599%2f&t=AWS_Ubuntu%ec%97%90%ec%84%9c_git_%ec%97%b0%eb%8f%99"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-facebook"></i
     ></a>
     <a
-      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25842%2f&text=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%282%29&tw_p=tweetbutton"
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ubuntu%25EC%2597%2590%25EC%2584%259C_git_%25EC%2597%25B0%25EB%258F%2599%2f&text=AWS_Ubuntu%ec%97%90%ec%84%9c_git_%ec%97%b0%eb%8f%99&tw_p=tweetbutton"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-twitter"></i
     ></a>
     <a
-      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25842%2f&title=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%282%29"
+      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ubuntu%25EC%2597%2590%25EC%2584%259C_git_%25EC%2597%25B0%25EB%258F%2599%2f&title=AWS_Ubuntu%ec%97%90%ec%84%9c_git_%ec%97%b0%eb%8f%99"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-get-pocket"></i
     ></a>
     <a
-      href="//plus.google.com/share?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25842%2f"
+      href="//plus.google.com/share?url=https%3a%2f%2fjune512.github.io%2faws_ubuntu%25EC%2597%2590%25EC%2584%259C_git_%25EC%2597%25B0%25EB%258F%2599%2f"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-google-plus"></i
     ></a>
@@ -149,7 +194,7 @@ git pull origin master //bitbucket에 올려놓은 파일 끌어오기
       <a href="mailto:kki6890k@gmail.com">Kim Kang-il</a>
       
       wrotes this article at
-      <span class="highlight">Tuesday, May 19, 2020 17:49</span> 
+      <span class="highlight">Tuesday, May 19, 2020 18:03</span> 
       for you.
     </div>
     <div class="desc">
@@ -189,17 +234,11 @@ git pull origin master //bitbucket에 올려놓은 파일 끌어오기
     <ul>
       
       <li>
-        <a href="https://june512.github.io/ubuntu_git/" rel="prev">
-          <span>Ubuntu_git</span>
+        <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/" rel="prev">
+          <span>AWS_EC2_웹서버(2)</span>
         </a>
       </li>
       
-      
-      <li>
-        <a href="https://june512.github.io/aws_ubuntu%EC%97%90%EC%84%9C_git_%EC%97%B0%EB%8F%99/" rel="next">
-          <span>AWS_Ubuntu에서_git_연동</span>
-        </a>
-      </li>
       
     </ul>
   </div>
