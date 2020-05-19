@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on June&#39;s site</title>
+    <link>https://june512.github.io/tags/</link>
+    <description>Recent content in Tags on June&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr-ko</language>
+    <managingEditor>kki6890k@gmail.com (Kim Kang-il)</managingEditor>
+    <webMaster>kki6890k@gmail.com (Kim Kang-il)</webMaster>
+    
+	<atom:link href="https://june512.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
