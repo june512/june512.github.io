@@ -74,6 +74,53 @@
 
   <div class="post">
   <div class="post-title">
+    <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/" title="AWS_EC2_웹서버(2)">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Tuesday, May 19, 2020 17:49</time>
+        <h1>AWS_EC2_웹서버(2)</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    이 화면은 (1)편에서 아파치 서버 설치 후 확인할 때 나타나는 화면의 일부입니다. 화면에서 스크롤을 조금 내려보면 document root directory, ubuntu document root가 어디인지 확인할 수 있습니다. html폴더 안에 파일을 올려야 publicDNS/파일이름 으로 웹 브라우저에서 접근 가능합니다. 데이터베이스 sudo apt-get update //패키지 업데이트 sudo apt-get install mysql-server mysql -uroot -p //mysql root 계정 접속 show databases; //db 확인 exit //mysql 나와서 다시 리눅스로 PHP sudo add-apt-repository ppa:ondrej/php //보안을 위한 저장소 추가 sudo apt-get update //저장소에서 패키지 업데이트 sudo apt-get install php //했더니 php 7.
+    
+    <a href="/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+
+  <div class="post">
+  <div class="post-title">
+    <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/" title="AWS_EC2_웹서버(1)">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Tuesday, May 19, 2020 17:48</time>
+        <h1>AWS_EC2_웹서버(1)</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    클러스터 생성 aws 공식 홈페이지에서 가이드라인을 putty로 제공하기 때문에 사용. putty를 사용하는 이유는 서버를 구성하는 우분투 리눅스를 원격으로 연결해서 사용하기 위함이다. putty 설치 : &lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&gt; 1. 키 변경 .pem 확장자의 키를 .ppk확장자의 private key로 변경하는 과정이다.
+putty를 통합설치하면 딸려있는 puttygen을 이용한다.
+Load 클릭 - 모든 파일 - 아까 만들었던 .pem 키 선택
+Save private key로 저장. (이름은 똑같이)
+2. 설정 및 접속 https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html 를 참조
+호스트 네임 ubuntu@(public dns) SSH 포트22 SSH-Auth-아까 만든 .
+    
+    <a href="/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+
+  <div class="post">
+  <div class="post-title">
     <a href="https://june512.github.io/ubuntu_git/" title="Ubuntu_git">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">

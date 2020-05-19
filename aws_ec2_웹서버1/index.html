@@ -3,14 +3,14 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AWS  | June&#39;s site</title>
-  <meta name="description" content=" 'AWS'read this article.">
-  <meta property="og:title" content="AWS">
+  <title>AWS_EC2_ì›¹ì„œë²„(1)  | June&#39;s site</title>
+  <meta name="description" content=" 'AWS_EC2_ì›¹ì„œë²„(1)'read this article.">
+  <meta property="og:title" content="AWS_EC2_ì›¹ì„œë²„(1)">
   
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="2020-05-19">
   
-  <meta property="og:description" content=" 'AWS'read this article.">
+  <meta property="og:description" content=" 'AWS_EC2_ì›¹ì„œë²„(1)'read this article.">
   <meta property="og:url" content="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/">
   <meta property="og:site_name" content="June&#39;s site">
   
@@ -75,8 +75,8 @@
     <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
-        <time>Tuesday, May 19, 2020 17:29</time>
-        <h1>AWS</h1>
+        <time>Tuesday, May 19, 2020 17:48</time>
+        <h1>AWS_EC2_ì›¹ì„œë²„(1)</h1>
       </div>
     </a>
   </div>
@@ -84,8 +84,8 @@
     <span class="title">TOC</span>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-Å±-">1. Å° º¯°æ</a></li>
-    <li><a href="#2---">2. ¼³Á¤ ¹× Á¢¼Ó</a>
+    <li><a href="#1-í‚¤-ë³€ê²½">1. í‚¤ ë³€ê²½</a></li>
+    <li><a href="#2-ì„¤ì •-ë°-ì ‘ì†">2. ì„¤ì • ë° ì ‘ì†</a>
       <ul>
         <li></li>
       </ul>
@@ -102,44 +102,44 @@
 </nav>
   </div>
   <section class="post-content">
-    <h1 id="Å­-">Å¬·¯½ºÅÍ »ı¼º</h1>
-<pre><code>aws °ø½Ä È¨ÆäÀÌÁö¿¡¼­ °¡ÀÌµå¶óÀÎÀ» putty·Î Á¦°øÇÏ±â ¶§¹®¿¡ »ç¿ë.
-putty¸¦ »ç¿ëÇÏ´Â ÀÌÀ¯´Â ¼­¹ö¸¦ ±¸¼ºÇÏ´Â ¿ìºĞÅõ ¸®´ª½º¸¦ ¿ø°İÀ¸·Î ¿¬°áÇØ¼­ »ç¿ëÇÏ±â À§ÇÔÀÌ´Ù.
-putty ¼³Ä¡ : &lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&gt;
-</code></pre><h2 id="1-Å±-">1. Å° º¯°æ</h2>
-<p>.pem È®ÀåÀÚÀÇ Å°¸¦ .ppkÈ®ÀåÀÚÀÇ private key·Î º¯°æÇÏ´Â °úÁ¤ÀÌ´Ù.</p>
-<p>putty¸¦ ÅëÇÕ¼³Ä¡ÇÏ¸é µş·ÁÀÖ´Â puttygenÀ» ÀÌ¿ëÇÑ´Ù.</p>
+    <h1 id="í´ëŸ¬ìŠ¤í„°-ìƒì„±">í´ëŸ¬ìŠ¤í„° ìƒì„±</h1>
+<pre><code>aws ê³µì‹ í™ˆí˜ì´ì§€ì—ì„œ ê°€ì´ë“œë¼ì¸ì„ puttyë¡œ ì œê³µí•˜ê¸° ë•Œë¬¸ì— ì‚¬ìš©.
+puttyë¥¼ ì‚¬ìš©í•˜ëŠ” ì´ìœ ëŠ” ì„œë²„ë¥¼ êµ¬ì„±í•˜ëŠ” ìš°ë¶„íˆ¬ ë¦¬ëˆ…ìŠ¤ë¥¼ ì›ê²©ìœ¼ë¡œ ì—°ê²°í•´ì„œ ì‚¬ìš©í•˜ê¸° ìœ„í•¨ì´ë‹¤.
+putty ì„¤ì¹˜ : &lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&gt;
+</code></pre><h2 id="1-í‚¤-ë³€ê²½">1. í‚¤ ë³€ê²½</h2>
+<p>.pem í™•ì¥ìì˜ í‚¤ë¥¼ .ppkí™•ì¥ìì˜ private keyë¡œ ë³€ê²½í•˜ëŠ” ê³¼ì •ì´ë‹¤.</p>
+<p>puttyë¥¼ í†µí•©ì„¤ì¹˜í•˜ë©´ ë”¸ë ¤ìˆëŠ” puttygenì„ ì´ìš©í•œë‹¤.</p>
 <p><img src="https://user-images.githubusercontent.com/65329769/82172214-8811ac80-9904-11ea-87a3-6e7a4804e55d.jpg" alt="key_1"></p>
-<p>Load Å¬¸¯ - ¸ğµç ÆÄÀÏ - ¾Æ±î ¸¸µé¾ú´ø .pem Å° ¼±ÅÃ</p>
+<p>Load í´ë¦­ - ëª¨ë“  íŒŒì¼ - ì•„ê¹Œ ë§Œë“¤ì—ˆë˜ .pem í‚¤ ì„ íƒ</p>
 <p><img src="https://user-images.githubusercontent.com/65329769/82172307-c1e2b300-9904-11ea-9980-1c99159fc8cd.jpg" alt="key_2"></p>
-<p>Save private key·Î ÀúÀå. (ÀÌ¸§Àº ¶È°°ÀÌ)</p>
-<h2 id="2---">2. ¼³Á¤ ¹× Á¢¼Ó</h2>
-<p><a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html</a> ¸¦ ÂüÁ¶</p>
-<h4 id="È£Êˆ--ubuntupublic-dns">È£½ºÆ® ³×ÀÓ ubuntu@(public dns)</h4>
-<h4 id="ssh-Êˆ22">SSH Æ÷Æ®22</h4>
-<h4 id="ssh-auth-ÊŠ--ppk-Å±-Ò·">SSH-Auth-¾Æ±î ¸¸µç .ppk Å° ºÒ·¯¿À±â</h4>
-<h1 id="-Ä¡-Ä¡">À¥ ¼­¹ö(¾ÆÆÄÄ¡) ¼³Ä¡</h1>
-<p>putty·Î ¿¬ ÄÜ¼ÖÃ¢¿¡ ÀÌ°ÍµéÀ» ÀÔ·Â</p>
+<p>Save private keyë¡œ ì €ì¥. (ì´ë¦„ì€ ë˜‘ê°™ì´)</p>
+<h2 id="2-ì„¤ì •-ë°-ì ‘ì†">2. ì„¤ì • ë° ì ‘ì†</h2>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html</a> ë¥¼ ì°¸ì¡°</p>
+<h4 id="í˜¸ìŠ¤íŠ¸-ë„¤ì„-ubuntupublic-dns">í˜¸ìŠ¤íŠ¸ ë„¤ì„ ubuntu@(public dns)</h4>
+<h4 id="ssh-í¬íŠ¸22">SSH í¬íŠ¸22</h4>
+<h4 id="ssh-auth-ì•„ê¹Œ-ë§Œë“ -ppk-í‚¤-ë¶ˆëŸ¬ì˜¤ê¸°">SSH-Auth-ì•„ê¹Œ ë§Œë“  .ppk í‚¤ ë¶ˆëŸ¬ì˜¤ê¸°</h4>
+<h1 id="ì›¹-ì„œë²„ì•„íŒŒì¹˜-ì„¤ì¹˜">ì›¹ ì„œë²„(ì•„íŒŒì¹˜) ì„¤ì¹˜</h1>
+<p>puttyë¡œ ì—° ì½˜ì†”ì°½ì— ì´ê²ƒë“¤ì„ ì…ë ¥</p>
 <pre><code>sudo apt-get update
 
 sudo apt-get update sudo apt-get install apache2
 </code></pre><p><img src="https://user-images.githubusercontent.com/65329769/82172488-433a4580-9905-11ea-9329-481702b86e6c.jpg" alt="993F4C4A5B5D39EA2F"></p>
-<h4 id="Ã³--httpswoodforesttistorycom279">ÃâÃ³ : <a href="https://woodforest.tistory.com/279">https://woodforest.tistory.com/279</a></h4>
+<h4 id="ì¶œì²˜--httpswoodforesttistorycom279">ì¶œì²˜ : <a href="https://woodforest.tistory.com/279">https://woodforest.tistory.com/279</a></h4>
 
   </section>
   <div class="share">    
     <a
-      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&t=AWS"
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&t=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-facebook"></i
     ></a>
     <a
-      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&text=AWS&tw_p=tweetbutton"
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&text=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29&tw_p=tweetbutton"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-twitter"></i
     ></a>
     <a
-      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&title=AWS"
+      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2faws_ec2_%25EC%259B%25B9%25EC%2584%259C%25EB%25B2%25841%2f&title=AWS_EC2_%ec%9b%b9%ec%84%9c%eb%b2%84%281%29"
       onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
       ><i class="fa fa-get-pocket"></i
     ></a>
@@ -156,7 +156,7 @@ sudo apt-get update sudo apt-get install apache2
       <a href="mailto:kki6890k@gmail.com">Kim Kang-il</a>
       
       wrotes this article at
-      <span class="highlight">Tuesday, May 19, 2020 17:29</span> 
+      <span class="highlight">Tuesday, May 19, 2020 17:48</span> 
       for you.
     </div>
     <div class="desc">
@@ -201,6 +201,12 @@ sudo apt-get update sudo apt-get install apache2
         </a>
       </li>
       
+      
+      <li>
+        <a href="https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%842/" rel="next">
+          <span>AWS_EC2_ì›¹ì„œë²„(2)</span>
+        </a>
+      </li>
       
     </ul>
   </div>
