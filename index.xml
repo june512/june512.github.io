@@ -8,10 +8,24 @@
     <language>kr-ko</language>
     <managingEditor>kki6890k@gmail.com (Kim Kang-il)</managingEditor>
     <webMaster>kki6890k@gmail.com (Kim Kang-il)</webMaster>
-    <lastBuildDate>Tue, 19 May 2020 17:15:23 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 17:29:48 +0900</lastBuildDate>
     
 	<atom:link href="https://june512.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS</title>
+      <link>https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/</link>
+      <pubDate>Tue, 19 May 2020 17:29:48 +0900</pubDate>
+      <author>kki6890k@gmail.com (Kim Kang-il)</author>
+      <guid>https://june512.github.io/aws_ec2_%EC%9B%B9%EC%84%9C%EB%B2%841/</guid>
+      <description>Ŭ������ ���� aws ���� Ȩ���������� ���̵������� putty�� �����ϱ� ������ ����.putty�� �����ϴ� ������ ������ �����ϴ� ������ �������� �������� �����ؼ� �����ϱ� �����̴�.putty ��ġ : &amp;lt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&amp;gt;1. Ű ���� .pem Ȯ������ Ű�� .ppkȮ������ private key�� �����ϴ� �����̴�.
+putty�� ���ռ�ġ�ϸ� �����ִ� puttygen�� �̿��Ѵ�.
+Load Ŭ�� - ���� ���� - �Ʊ� �������� .pem Ű ����
+Save private key�� ����. (�̸��� �Ȱ���)
+2. ���� �� ���� https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html �� ����
+ȣ��Ʈ ���� ubuntu@(public dns) SSH ��Ʈ22 SSH-Auth-�Ʊ� ���� .</description>
+    </item>
     
     <item>
       <title>Ubuntu_git</title>
