@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker_insert_in_ubuntu  | June&#39;s site</title>
+  <meta name="description" content=" 'Docker_insert_in_ubuntu'read this article.">
+  <meta property="og:title" content="Docker_insert_in_ubuntu">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-05-21">
+  
+  <meta property="og:description" content=" 'Docker_insert_in_ubuntu'read this article.">
+  <meta property="og:url" content="https://june512.github.io/docker_insert_in_ubuntu/">
+  <meta property="og:site_name" content="June&#39;s site">
+  
+  <meta property="og:image" content="https://june512.github.io/images/thumbnail.png">
+  
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://june512.github.io/docker_insert_in_ubuntu/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">#June&#39;s site</a></li>
+        <li><a href="/categories">#Categories</a></li>
+        <li><a href="/tags">#Tags</a></li>
+        <li><a href="/projects">#Projects</a></li>        
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+<div class="post">
+  <div class="post-title">
+    <a href="https://june512.github.io/docker_insert_in_ubuntu/">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Thursday, May 21, 2020 12:28</time>
+        <h1>Docker_insert_in_ubuntu</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents"></nav>
+  </div>
+  <section class="post-content">
+    <h1 id="기존-도커-설치-버전을-제거">기존 도커 설치 버전을 제거</h1>
+<p>sudo apt-get remove docker docker-engine docker.io containerd runc</p>
+<h1 id="저장소를-업데이트-한다">저장소를 업데이트 한다.</h1>
+<p>sudo apt-get update</p>
+<h1 id="apt-가-https-저장소를-사용할-수-있도록-설치한다">apt 가 https 저장소를 사용할 수 있도록 설치한다.</h1>
+<p>sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common</p>
+<h1 id="도커-저장소-키를-apt에-등록한다">도커 저장소 키를 apt에 등록한다.</h1>
+<p>curl -fsSL <a href="https://download.docker.com/linux/ubuntu/gpg">https://download.docker.com/linux/ubuntu/gpg</a> | sudo apt-key add -</p>
+<h1 id="아래-명령어로-docker-ce-키가-등록되었는지-확인한다">아래 명령어로 docker-ce 키가 등록되었는지 확인한다.</h1>
+<p>sudo apt-key fingerprint 0EBFCD88</p>
+<pre><code>pub rsa4096 2017-02-22 [SCEA] 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
+
+uid [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
+
+sub rsa4096 2017-02-22 [S]
+</code></pre><h1 id="도커-저장소를-등록한다">도커 저장소를 등록한다.</h1>
+<p>sudo add-apt-repository &ldquo;deb [arch=amd64] <a href="https://download.docker.com/linux/ubuntu">https://download.docker.com/linux/ubuntu</a> $(lsb_release -cs) stable&rdquo;</p>
+<pre><code>stable는 안정판인데 목적에 따라 nightly, test 를 사용할 수 있다.
+
+$(lsb_release -cs) 는 현재 명령이 실행되는 우분투 배포판 이름을 가져온다.
+
+필요하다면 직접 넣을 수 있다. ex) precise 등.
+</code></pre><h1 id="저장소를-등록했다면-apt-업데이트-해준다">저장소를 등록했다면 apt 업데이트 해준다.</h1>
+<p>sudo apt-get update</p>
+<h1 id="도커를-설치한다">도커를 설치한다.</h1>
+<p>sudo apt-get install docker-ce docker-ce-cli containerd.io</p>
+<h1 id="도커의-특정-버전-설치를-원한다면-아래-단계를-따른다">도커의 특정 버전 설치를 원한다면 아래 단계를 따른다.</h1>
+<h1 id="도커-설치-가능-버전-목록-확인하기">도커 설치 가능 버전 목록 확인하기</h1>
+<p>apt-cache madison docker-ce</p>
+<pre><code>docker-ce | 5:18.09.1~3-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable ...
+
+docker-ce | 5:18.09.0~3-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu xenial/stable ...
+
+docker-ce | 18.06.1~ce~3-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable ...
+
+docker-ce | 18.06.0~ce~3-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable ...
+</code></pre><h1 id="위-버전-중-원하는-버전을-입력하여-설치한다">위 버전 중 원하는 버전을 입력하여 설치한다.</h1>
+<p>sudo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io</p>
+<pre><code>ex) sudo apt-get install docker-ce=18.06.1~ce~3-0~ubuntu docker-ce-cli=18.06.1~ce~3-0~ubuntu containerd.io
+</code></pre><h1 id="도커-설치-확인">도커 설치 확인</h1>
+<p>sudo docker version</p>
+<p>sudo docker run hello-world</p>
+<h1 id="도커-root-외의-사용자도-사용할-수-있도록-권한-추가하기">도커 root 외의 사용자도 사용할 수 있도록 권한 추가하기</h1>
+<h1 id="도커-권한-확인하기">도커 권한 확인하기</h1>
+<p>cat /etc/group | grep docker
+docker:x:999:</p>
+<h1 id="도커-그룹에-사용할-사용자-아이디-추가">도커 그룹에 사용할 사용자 아이디 추가</h1>
+<p>sudo usermod -aG docker 사용할아이디</p>
+<pre><code>ex) sudo usermod -aG docker iamdeveloper
+</code></pre><h1 id="실행-후-확인하면-아래와-같이-사용자-아이디-추가됨">실행 후 확인하면 아래와 같이 사용자 아이디 추가됨</h1>
+<p>cat /etc/group | grep docker</p>
+<pre><code>docker:x:999:iamdeveloper
+</code></pre><h1 id="시스템을-재-시작하여-사용자-권한으로-도커-사용-가능한지-확인">시스템을 재 시작하여 사용자 권한으로 도커 사용 가능한지 확인</h1>
+<p>sudo reboot</p>
+<h1 id="사용자-계정으로-도커-사용-확인">사용자 계정으로 도커 사용 확인</h1>
+<p>docker version</p>
+<h1 id="client-와-server-정보가-나오면-사용-가능함">Client: 와 Server: 정보가 나오면 사용 가능함.</h1>
+<h1 id="아래-메시지가-나오면-권한-설정이-제대로-된-것이-아니므로-다시-설정시도하거나-관련-메시지로-구글링하여-해결한다">아래 메시지가 나오면 권한 설정이 제대로 된 것이 아니므로 다시 설정시도하거나 관련 메시지로 구글링하여 해결한다.</h1>
+<pre><code>Got permission denied while trying to connect to the Docker daemon socket
+</code></pre>
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2fdocker_insert_in_ubuntu%2f&t=Docker_insert_in_ubuntu"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2fdocker_insert_in_ubuntu%2f&text=Docker_insert_in_ubuntu&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2fdocker_insert_in_ubuntu%2f&title=Docker_insert_in_ubuntu"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=https%3a%2f%2fjune512.github.io%2fdocker_insert_in_ubuntu%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:kki6890k@gmail.com">Kim Kang-il</a>
+      
+      wrotes this article at
+      <span class="highlight">Thursday, May 21, 2020 12:28</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_Tags</span>
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XXXXXXXXXXXXXXX" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="https://june512.github.io/aws_ubuntu%EC%97%90%EC%84%9C_git_%EC%97%B0%EB%8F%99/" rel="prev">
+          <span>AWS_Ubuntu에서_git_연동</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  COPYRIGHT (C) <a href="https://blog.lulab.net">DONGGEUN,BANG (LUBANG).</a><br />
+  ALL RIGHTS RESERVED.
+</footer>
+</body>
+</html>
+

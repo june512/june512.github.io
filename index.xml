@@ -8,10 +8,24 @@
     <language>kr-ko</language>
     <managingEditor>kki6890k@gmail.com (Kim Kang-il)</managingEditor>
     <webMaster>kki6890k@gmail.com (Kim Kang-il)</webMaster>
-    <lastBuildDate>Tue, 19 May 2020 18:03:33 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 12:28:08 +0900</lastBuildDate>
     
 	<atom:link href="https://june512.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker_insert_in_ubuntu</title>
+      <link>https://june512.github.io/docker_insert_in_ubuntu/</link>
+      <pubDate>Thu, 21 May 2020 12:28:08 +0900</pubDate>
+      <author>kki6890k@gmail.com (Kim Kang-il)</author>
+      <guid>https://june512.github.io/docker_insert_in_ubuntu/</guid>
+      <description>기존 도커 설치 버전을 제거 sudo apt-get remove docker docker-engine docker.io containerd runc
+저장소를 업데이트 한다. sudo apt-get update
+apt 가 https 저장소를 사용할 수 있도록 설치한다. sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+도커 저장소 키를 apt에 등록한다. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+아래 명령어로 docker-ce 키가 등록되었는지 확인한다. sudo apt-key fingerprint 0EBFCD88
+pub rsa4096 2017-02-22 [SCEA] 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88 uid [ unknown] Docker Release (CE deb) &amp;lt;docker@docker.</description>
+    </item>
     
     <item>
       <title>AWS_Ubuntu에서_git_연동</title>
