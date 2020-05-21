@@ -19,7 +19,8 @@
       <pubDate>Thu, 21 May 2020 12:47:08 +0900</pubDate>
       <author>kki6890k@gmail.com (Kim Kang-il)</author>
       <guid>https://june512.github.io/docker_engine_in_ubuntu/</guid>
-      <description>전제 조건 ## OS 요구 사항 Docker Engine을 설치하려면 다음 Ubuntu 버전 중 하나의 64 비트 버전이 필요 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;우분투 Eoan 19.10&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;우분투 바이오닉 18.04 (LTS)&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;우분투 제니 얼 16.04 (LTS)&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; ## 이전 버전 제거 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;docker, docker.io 또는 docker-engine 설치되어 있으면 제거&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; ``` $ sudo apt-get remove docker docker-engine docker.io containerd runc ```  설치 ## 저장소를 사용하여 설치 1. HTTPS를 통해 저장소를 사용할 수 있도록 패키지 색인을 업데이트하고 패키지를 설치 ``` $ sudo apt-get update $ sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg-agent \ software-properties-common ``` 2.</description>
+      <description>전제 조건 OS 요구 사항 Docker Engine을 설치하려면 다음 Ubuntu 버전 중 하나의 64 비트 버전이 필요
+이전 버전 제거 $ sudo apt-get remove docker docker-engine docker.io containerd runc 설치 저장소를 사용하여 설치  HTTPS를 통해 저장소를 사용할 수 있도록 패키지 색인을 업데이트하고 패키지를 설치   $ sudo apt-get update $ sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg-agent \ software-properties-common Docker의 공식 GPG 키를 추가   $ curl -fsSL https://download.</description>
     </item>
     
     <item>
