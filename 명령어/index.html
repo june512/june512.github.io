@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명령어  | June&#39;s site</title>
+  <meta name="description" content=" '명령어'read this article.">
+  <meta property="og:title" content="명령어">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-05-26">
+  
+  <meta property="og:description" content=" '명령어'read this article.">
+  <meta property="og:url" content="https://june512.github.io/%EB%AA%85%EB%A0%B9%EC%96%B4/">
+  <meta property="og:site_name" content="June&#39;s site">
+  
+  <meta property="og:image" content="https://june512.github.io/images/thumbnail.png">
+  
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://june512.github.io/%EB%AA%85%EB%A0%B9%EC%96%B4/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">#June&#39;s site</a></li>
+        <li><a href="/categories">#Categories</a></li>
+        <li><a href="/tags">#Tags</a></li>
+        <li><a href="/projects">#Projects</a></li>        
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+<div class="post">
+  <div class="post-title">
+    <a href="https://june512.github.io/%EB%AA%85%EB%A0%B9%EC%96%B4/">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Tuesday, May 26, 2020 09:24</time>
+        <h1>명령어</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents"></nav>
+  </div>
+  <section class="post-content">
+    <p>#터미널에서 시스템 종료 명령어 실행</p>
+<p>poweroff
+shutdown -P now
+halt -p
+init 0</p>
+<pre><code>shutdown -P +10 → 10분 후에 종료(P : poweroff)
+shutdown -r 22:00 → 오후 10시에 재부팅(r : reboot)
+shutdown -c → 예약된 shutdown을 취소(c : cancel)
+shutdown -k +15 →현재 접속한 사용자에게 15분 후에 종료된다는 메시지를 보내지만 실제로는 종료는 안 됨
+</code></pre><p>런레벨</p>
+<table>
+<thead>
+<tr>
+<th align="left">런레벨</th>
+<th align="left">영문 모드</th>
+<th align="left">설명</th>
+<th align="left">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">Power off</td>
+<td align="left">종료 모드</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Rescue</td>
+<td align="left">ㅣ스템 복구모드</td>
+<td align="left">단일 사용자 모드</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Multi-User</td>
+<td align="left"></td>
+<td align="left">사용하지 않음</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Multi-User</td>
+<td align="left">텍스트 모드의 다중 사용자 모드</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Multi-User</td>
+<td align="left"></td>
+<td align="left">사용하지 않음</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Graphical</td>
+<td align="left">그래픽 모드의 다중 사용자 모드</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Reboot</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<pre><code>init 0 → 지금 즉시 런레벨 0번으로 시스템을 전환하라는 의미
+즉, 즉시 시스템 종료
+</code></pre>
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fjune512.github.io%2f%25EB%25AA%2585%25EB%25A0%25B9%25EC%2596%25B4%2f&t=%eb%aa%85%eb%a0%b9%ec%96%b4"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=https%3a%2f%2fjune512.github.io%2f%25EB%25AA%2585%25EB%25A0%25B9%25EC%2596%25B4%2f&text=%eb%aa%85%eb%a0%b9%ec%96%b4&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=https%3a%2f%2fjune512.github.io%2f%25EB%25AA%2585%25EB%25A0%25B9%25EC%2596%25B4%2f&title=%eb%aa%85%eb%a0%b9%ec%96%b4"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=https%3a%2f%2fjune512.github.io%2f%25EB%25AA%2585%25EB%25A0%25B9%25EC%2596%25B4%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:kki6890k@gmail.com">Kim Kang-il</a>
+      
+      wrotes this article at
+      <span class="highlight">Tuesday, May 26, 2020 09:24</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_Tags</span>
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XXXXXXXXXXXXXXX" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="https://june512.github.io/docker_engine_in_ubuntu/" rel="prev">
+          <span>Docker_Engine_in_ubuntu</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  COPYRIGHT (C) <a href="https://blog.lulab.net">DONGGEUN,BANG (LUBANG).</a><br />
+  ALL RIGHTS RESERVED.
+</footer>
+</body>
+</html>
+

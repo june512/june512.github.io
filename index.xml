@@ -8,10 +8,22 @@
     <language>kr-ko</language>
     <managingEditor>kki6890k@gmail.com (Kim Kang-il)</managingEditor>
     <webMaster>kki6890k@gmail.com (Kim Kang-il)</webMaster>
-    <lastBuildDate>Thu, 21 May 2020 12:47:08 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 09:24:04 +0900</lastBuildDate>
     
 	<atom:link href="https://june512.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>명령어</title>
+      <link>https://june512.github.io/%EB%AA%85%EB%A0%B9%EC%96%B4/</link>
+      <pubDate>Tue, 26 May 2020 09:24:04 +0900</pubDate>
+      <author>kki6890k@gmail.com (Kim Kang-il)</author>
+      <guid>https://june512.github.io/%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
+      <description>#터미널에서 시스템 종료 명령어 실행
+poweroff shutdown -P now halt -p init 0
+shutdown -P +10 → 10분 후에 종료(P : poweroff) shutdown -r 22:00 → 오후 10시에 재부팅(r : reboot) shutdown -c → 예약된 shutdown을 취소(c : cancel) shutdown -k +15 →현재 접속한 사용자에게 15분 후에 종료된다는 메시지를 보내지만 실제로는 종료는 안 됨 런레벨
+   런레벨 영문 모드 설명 비고     0 Power off 종료 모드    1 Rescue ㅣ스템 복구모드 단일 사용자 모드   2 Multi-User  사용하지 않음   3 Multi-User 텍스트 모드의 다중 사용자 모드    4 Multi-User  사용하지 않음   5 Graphical 그래픽 모드의 다중 사용자 모드    6 Reboot      init 0 → 지금 즉시 런레벨 0번으로 시스템을 전환하라는 의미 즉, 즉시 시스템 종료 </description>
+    </item>
     
     <item>
       <title>Docker_Engine_in_ubuntu</title>
@@ -20,7 +32,7 @@
       <author>kki6890k@gmail.com (Kim Kang-il)</author>
       <guid>https://june512.github.io/docker_engine_in_ubuntu/</guid>
       <description>전제 조건 OS 요구 사항 Docker Engine을 설치하려면 다음 Ubuntu 버전 중 하나의 64 비트 버전이 필요
--우분투 Eoan 19.10 -우분투 바이오닉 18.04 (LTS) -우분투 제니 얼 16.04 (LTS)  이전 버전 제거 $ sudo apt-get remove docker docker-engine docker.io containerd runc 설치 저장소를 사용하여 설치  HTTPS를 통해 저장소를 사용할 수 있도록 패키지 색인을 업데이트하고 패키지를 설치   $ sudo apt-get update $ sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg-agent \ software-properties-common Docker의 공식 GPG 키를 추가   $ curl -fsSL https://download.</description>
+- 우분투 Eoan 19.10 - 우분투 바이오닉 18.04 (LTS) - 우분투 제니 얼 16.04 (LTS)  이전 버전 제거 $ sudo apt-get remove docker docker-engine docker.io containerd runc 설치 저장소를 사용하여 설치  HTTPS를 통해 저장소를 사용할 수 있도록 패키지 색인을 업데이트하고 패키지를 설치   $ sudo apt-get update $ sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ gnupg-agent \ software-properties-common Docker의 공식 GPG 키를 추가   $ curl -fsSL https://download.</description>
     </item>
     
     <item>
