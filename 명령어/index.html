@@ -85,7 +85,7 @@
     <nav id="TableOfContents"></nav>
   </div>
   <section class="post-content">
-    <p>#터미널에서 시스템 종료 명령어 실행</p>
+    <h1 id="터미널에서-시스템-종료-명령어-실행">터미널에서 시스템 종료 명령어 실행</h1>
 <p>poweroff
 shutdown -P now
 halt -p
@@ -94,7 +94,7 @@ init 0</p>
 shutdown -r 22:00 → 오후 10시에 재부팅(r : reboot)
 shutdown -c → 예약된 shutdown을 취소(c : cancel)
 shutdown -k +15 →현재 접속한 사용자에게 15분 후에 종료된다는 메시지를 보내지만 실제로는 종료는 안 됨
-</code></pre><p>런레벨</p>
+</code></pre><h1 id="런레벨">런레벨</h1>
 <table>
 <thead>
 <tr>
@@ -114,7 +114,7 @@ shutdown -k +15 →현재 접속한 사용자에게 15분 후에 종료된다는
 <tr>
 <td align="left">1</td>
 <td align="left">Rescue</td>
-<td align="left">ㅣ스템 복구모드</td>
+<td align="left">시스템 복구모드</td>
 <td align="left">단일 사용자 모드</td>
 </tr>
 <tr>
@@ -149,9 +149,9 @@ shutdown -k +15 →현재 접속한 사용자에게 15분 후에 종료된다는
 </tr>
 </tbody>
 </table>
-<pre><code>init 0 → 지금 즉시 런레벨 0번으로 시스템을 전환하라는 의미
-즉, 즉시 시스템 종료
-</code></pre>
+<p>init 0 → 지금 즉시 런레벨 0번으로 시스템을 전환하라는 의미
+즉, 즉시 시스템 종료</p>
+
   </section>
   <div class="share">    
     <a
